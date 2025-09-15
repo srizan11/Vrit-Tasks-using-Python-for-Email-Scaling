@@ -1,0 +1,22 @@
+Question: What is the shortest possible route the salesman can take, and what is the total
+distance?
+
+Answer: The travelling salesman problem is about finding the shortest route that visits all the cities exactly once and then returns to the starting city.
+In our case, there are only six cities, starting from city A and ending at city A.
+Because the number of cities is small, we can use brute force.
+That means we try every possible route, calculate its total distance, and then pick the one with the smallest value.
+The number of routes is large if the cities are many, but with six cities, it is still manageable.
+
+In brute force, we keep city A fixed as the starting point and then look at every possible ordering of the remaining five cities.
+For each order, we add the distances step by step until we return to city A.
+After checking all possible routes, we can compare the totals.
+The shortest route in this specific problem is A to B to E to D to F to C and then back to A, which adds up to a total of 95 kilometers.
+This is the minimum route among all the options.
+
+When the number of cities grows, brute force becomes impractical because the possible routes increase factorially.
+For example, with 20 cities the number of routes becomes impossibly huge for brute force.
+To handle larger numbers of cities, people use dynamic programming methods like the Held Karp algorithm, or heuristic and approximation methods like nearest neighbor, simulated annealing, or genetic algorithms.
+These approaches do not always give the perfect answer, but they give good results much faster and are scalable when the number of cities is very high.
+
+So for this task with only six cities, brute force works fine, and we can directly identify the shortest route and distance.
+But in the real world with many cities or delivery points, we need more advanced and scalable methods.
